@@ -38,4 +38,3 @@ Page layout CSS is in `src/pages.css`; the design system is in `src/styles.css`.
 - SPA fallback is included (`vercel.json`, `public/_redirects`) so refreshing /notes does not 404.
 - Add the deployed frontend origin to the backend's `CORS_ORIGINS`.
 
-<- Reports Hub: run every report. Try the Stock Ledger ( pick a product ) , Customer Statement, Customer Due ( Ageing ) and Stock Valuation with an earlier As
