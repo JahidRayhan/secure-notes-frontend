@@ -32,9 +32,3 @@ Guards (in `src/auth/guards.jsx`): `ProtectedRoute`, `AdminRoute` (non-admin -> 
 `/admin/users` (table, add/edit in a modal, delete) · `/admin/notes` (owner linked) · `/admin/interests` (grouped cards with a debounced, exact-match interest filter, a Clear button and an empty state).
 Shared helpers: `useDebounce`, `ListState` (loading/error/empty), `ConfirmDialog`, `useClampPage` (steps back a page after deleting the last item).
 Page layout CSS is in `src/pages.css`; the design system is in `src/styles.css`.
-
-## Deploy (Vercel / Netlify)
-- Build env var: `VITE_API_URL=https://<your-backend>.onrender.com/api` (must include `/api`). Without it the app calls `/api` on its own domain.
-- SPA fallback is included (`vercel.json`, `public/_redirects`) so refreshing /notes does not 404.
-- Add the deployed frontend origin to the backend's `CORS_ORIGINS`.
-
