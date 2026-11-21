@@ -32,3 +32,11 @@ Guards (in `src/auth/guards.jsx`): `ProtectedRoute`, `AdminRoute` (non-admin -> 
 `/admin/users` (table, add/edit in a modal, delete) · `/admin/notes` (owner linked) · `/admin/interests` (grouped cards with a debounced, exact-match interest filter, a Clear button and an empty state).
 Shared helpers: `useDebounce`, `ListState` (loading/error/empty), `ConfirmDialog`, `useClampPage` (steps back a page after deleting the last item).
 Page layout CSS is in `src/pages.css`; the design system is in `src/styles.css`.
+
+## Run locally with Docker
+Start the backend first (see its README), then:
+```bash
+docker compose up -d --build     # http://localhost:3000
+```
+It is built to call the API at `http://localhost:4000/api`. Stop with `docker compose down`.
+Without Docker: `npm install && npm run dev` (needs the backend on port 4000).
